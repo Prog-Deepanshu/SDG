@@ -1,0 +1,238 @@
+/* Global Styles */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* Header Styles */
+
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.5s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Container Styles */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: padding 0.5s ease-in-out;
+  animation: pulse 0.5s ease-in-out;
+}
+
+/* Typography Styles */
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #343a40;
+  transition: color 0.5s ease-in-out;
+}
+
+p {
+  margin: 10px 0;
+  transition: margin 0.5s ease-in-out;
+}
+
+/* Grid Styles */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  transition: padding 0.5s ease-in-out;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+/* Card Styles */
+
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.card-header {
+  padding: 16px;
+  background-color: var(--card-color);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  transition: font-size 0.5s ease-in-out;
+}
+
+.card-number {
+  font-weight: bold;
+  margin-right: 8px;
+  transition: font-weight 0.5s ease-in-out;
+}
+
+.card-content {
+  padding: 16px;
+  transition: padding 0.5s ease-in-out;
+}
+
+.description {
+  color: #6c757d;
+  transition: color 0.5s ease-in-out;
+}
+
+.details {
+  margin-top: 16px;
+  color: #343a40;
+  display: none;
+  transition: margin-top 0.5s ease-in-out, display 0.5s ease-in-out;
+}
+
+.card.expanded .details {
+  display: block;
+  transition: display 0.5s ease-in-out;
+}
+
+.toggle-btn {
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: font-size 0.5s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.card.expanded {
+  margin-bottom: 0;
+  transition: margin-bottom 0.5s ease-in-out;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(-100%);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+      transform: translateY(0);
+  }
+  to {
+      transform: translateY(-100%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/* Animation usage */
+
+.header {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.container {
+  animation: pulse 0.5s ease-in-out;
+}
+
+.grid {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.card {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.card.expanded {
+  animation: slideOut 0.5s ease-in-out;
+}
+
+.details {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+/* CSS */
+.button-9{
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #f0324b;
+  border-radius: 6px;
+  border: none;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin-left: 40%;
+}
+.button-9:disabled {
+  cursor: default;
+}
+
+.button-9:focus {
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+} 
